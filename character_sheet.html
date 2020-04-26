@@ -1,0 +1,76 @@
+<div class="3colrow">
+    <div class="col">
+    	<label>Name:</label><input type="text" name="attr_character_name" />
+		<label>Rank:</label><input type="text" name="attr_rank" />
+		<label>XP:</label><input type="number" name="attr_xp" />
+	</div>
+
+	<div class="col">
+		<img src="https://github.com/eheller23/Elemental/blob/master/Elemental%20Logo.jpg?raw=true" />
+	</div>
+
+	<div class="col">
+		<label>Setting:</label><input type="text" name="attr_setting" />
+		<label>Race:</label><input type="text" name="attr_race" />
+	</div>
+
+</div>
+
+<hr/>
+<div class="3colrow">
+	<div class="col">
+		<h2>Attributes</h2>
+
+		<label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
+        <button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[@{strength}d10]]}}'></button><span class='dee'>d</span>
+        <br />
+		<label>Dexterity </label><input type="text" name='attr_dexterity' class='sheet-short'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{dexterity}d10}]]}}'></button><span class='dee'>d</span>
+        <br />
+		<label>Constitution </label><input type="text" name='attr_constitution' class='sheet-short'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{constitution}d10]]}}'></button><span class='dee'>d</span>
+        <br />
+		<label>Perception </label><input type="text" name='attr_perception' class='sheet-short'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{perception}d10]]}}'></button><span class='dee'>d</span>
+        <br />
+		<label>Knowledge </label><input type="text" name='attr_knowledge' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{knowledge}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+        <label>Subconcious </label><input type="text" name='attr_subconcious' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{subconcious}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+        <label>Stealth </label><input type="text" name='attr_stealth' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{stealth}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+        <label>Charisma </label><input type="text" name='attr_charisma' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{charisma}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+        <label>Wealth </label><input type="text" name='attr_wealth' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wealth}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+        <label>Nobility </label><input type="text" name='attr_nobility' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{nobility}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+    	<label>Contacts </label><input type="text" name='attr_contacts' class='sheet-short' value='25'>
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[@{contacts}d10]]}}'></button><span class='dee'>d</span>
+        <hr />
+        <h2">Skills</h2>
+        
+<!--        <fieldset class="repeating_skills">
+            <select name="attr_dtype" class="dtype">
+                <option value="d4">d4</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+            </select>
+            <input type="text" name="attr_skillname" />
+        </fieldset>
+--></h2>
+	</div>
+
+
+
+
+
+</div>
