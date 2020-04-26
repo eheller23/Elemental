@@ -1,38 +1,37 @@
-<div class="3colrow">
+<div class="col">
+	<img src="https://github.com/eheller23/Elemental/blob/master/Elemental%20Logo.jpg?raw=true" />
+</div>	
+          
+<div class="2colrow">
     <div class="col">
     	<label>Name:</label><input type="text" name="attr_character_name" />
-		<label>Rank:</label><input type="text" name="attr_rank" />
-		<label>XP:</label><input type="number" name="attr_xp" />
+	<label>Player:</label><input type="text" name="attr_player_name" />	
 	</div>
 
 	<div class="col">
-		<img src="https://github.com/eheller23/Elemental/blob/master/Elemental%20Logo.jpg?raw=true" />
-	</div>
-
-	<div class="col">
-		<label>Setting:</label><input type="text" name="attr_setting" />
 		<label>Race:</label><input type="text" name="attr_race" />
+		<label>Following:</label><input type="text" name="attr_following" />
 	</div>
 
+	
 </div>
 
 <hr/>
 <div class="col">
 		<h2>Attributes</h2>
-
-	 	<label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
+	 	      <label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
         	<button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[@{strength}d10]]}}'></button><span class='dee'></span>
         	<br />
-		<label>Dexterity </label><input type="text" name='attr_dexterity' class='sheet-short'>
+		      <label>Dexterity </label><input type="text" name='attr_dexterity' class='sheet-short'>
         	<button type='roll' name='roll_dexterity' value='&{template:default} {{name=@{character_name}}} {{result=[[@{dexterity}d10}]]}}'></button><span class='dee'></span>
        	 	<br />
-		<label>Constitution </label><input type="text" name='attr_constitution' class='sheet-short'>
+		      <label>Constitution </label><input type="text" name='attr_constitution' class='sheet-short'>
         	<button type='roll' name='roll_constitution' value='&{template:default} {{name=@{character_name}}} {{result=[[@{constitution}d10]]}}'></button><span class='dee'></span>
         	<br />
-		<label>Perception </label><input type="text" name='attr_perception' class='sheet-short'>
+		      <label>Perception </label><input type="text" name='attr_perception' class='sheet-short'>
         	<button type='roll' name='roll_perception' value='&{template:default} {{name=@{character_name}}} {{result=[[@{perception}d10]]}}'></button><span class='dee'></span>
         	<br />
-		<label>Knowledge </label><input type="text" name='attr_knowledge' class='sheet-short' value='25'>
+		      <label>Knowledge </label><input type="text" name='attr_knowledge' class='sheet-short' value='25'>
         	<button type='roll' name='roll_knowledge' value='&{template:default} {{name=@{character_name}}} {{result=[[@{knowledge}d10]]}}'></button><span class='dee'></span>
         	<br />
         	<label>Subconcious </label><input type="text" name='attr_subconcious' class='sheet-short' value='25'>
@@ -50,7 +49,7 @@
         	<label>Nobility </label><input type="text" name='attr_nobility' class='sheet-short' value='25'>
         	<button type='roll' name='roll_nobility' value='&{template:default} {{name=@{character_name}}} {{result=[[@{nobility}d10]]}}'></button><span class='dee'></span>
         	<br />
-    		<label>Contacts </label><input type="text" name='attr_contacts' class='sheet-short' value='25'>
+    		  <label>Contacts </label><input type="text" name='attr_contacts' class='sheet-short' value='25'>
         	<button type='roll' name='roll_contacts' value='&{template:default} {{name=@{character_name}}} {{result=[[@{contacts}d10]]}}'></button><span class='dee'></span>
         	<br />
                 <hr/>
@@ -82,9 +81,36 @@
 		</fieldset>
 		</h2>
 	</div>
+	
+	<h2">Experience</h2>
+		
+	<div class="3colrow">
+		<div class="col">
+			<label>Ingenio Level:</label><input type="number" name="ingenio_level" />
+			<label>Ingenio XP:</label><input type="number" name="ingenio_xp" />
+		</div>	
 
+		<div class="col">
+			<label>Viator Level:</label><input type="number" name="viator_level" />
+			<label>Viator XP:</label><input type="number" name="viator_xp" />
+		</div>
 
-
-
-
+		<div class="col">
+			<label>Forti Level:</label><input type="number" name="forti_level" />
+			<label>Forti XP:</label><input type="number" name="forti_xp" />
+		</div>
+									    
+	</div>
+	<hr />
+	<div class="2colrow">
+		<div class="col">
+			<label>Money</label><input type="number" name="money" />
+		</div>
+										     
+		<div class="col">								
+			<label>Vitality</label><input type="number" name="vitality" />
+		</div>
+										   
+	</div>		    
+	<h2">Skills</h2>									  
 </div>
