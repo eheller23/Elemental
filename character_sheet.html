@@ -17,12 +17,13 @@
 </div>
 
 <hr/>
-<div class="col">
+<div class="2colrow">
+	<div class="col">
 		<h2>Attributes</h2>
-	 	      <label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
-        	<button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[@{strength}d10]]}}'></button><span class='dee'></span>
-        	<br />
-		      <label>Dexterity </label><input type="text" name='attr_dexterity' class='sheet-short'>
+	 	     <label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
+        	 <button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[@{strength}d10]]}}'></button><span class='dee'></span>
+        	 <br />
+		     <label>Dexterity </label><input type="text" name='attr_dexterity' class='sheet-short'>
         	<button type='roll' name='roll_dexterity' value='&{template:default} {{name=@{character_name}}} {{result=[[@{dexterity}d10}]]}}'></button><span class='dee'></span>
        	 	<br />
 		      <label>Constitution </label><input type="text" name='attr_constitution' class='sheet-short'>
@@ -52,8 +53,13 @@
     		  <label>Contacts </label><input type="text" name='attr_contacts' class='sheet-short' value='25'>
         	<button type='roll' name='roll_contacts' value='&{template:default} {{name=@{character_name}}} {{result=[[@{contacts}d10]]}}'></button><span class='dee'></span>
         	<br />
-                <hr/>
+	</div>    
 	
+	<div class= "col">
+		<h2>Weapons</h2>
+	</div>
+</div>
+<hr/>	
 	<h2">Experience</h2>
 		
 	<div class="3colrow">
