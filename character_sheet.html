@@ -17,48 +17,155 @@
 </div>
 
 <hr/>
-<div class="2colrow">
+
 	<div class="col">
 		<h2>Attributes</h2>
-	 	     <label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
+	 	     <label>Strength </label><input type="number" name='attr_strength' class='sheet-short'>
         	 <button type='roll' name='roll_strength' value='&{template:default} {{name=@{character_name}}} {{result=[[@{strength}d10]]}}'></button><span class='dee'></span>
         	 <br />
-		     <label>Dexterity </label><input type="text" name='attr_dexterity' class='sheet-short'>
+		     <label>Dexterity </label><input type="number" name='attr_dexterity' class='sheet-short'>
         	<button type='roll' name='roll_dexterity' value='&{template:default} {{name=@{character_name}}} {{result=[[@{dexterity}d10}]]}}'></button><span class='dee'></span>
        	 	<br />
-		      <label>Constitution </label><input type="text" name='attr_constitution' class='sheet-short'>
+		      <label>Constitution </label><input type="number" name='attr_constitution' class='sheet-short'>
         	<button type='roll' name='roll_constitution' value='&{template:default} {{name=@{character_name}}} {{result=[[@{constitution}d10]]}}'></button><span class='dee'></span>
         	<br />
-		      <label>Perception </label><input type="text" name='attr_perception' class='sheet-short'>
+		      <label>Perception </label><input type="number" name='attr_perception' class='sheet-short'>
         	<button type='roll' name='roll_perception' value='&{template:default} {{name=@{character_name}}} {{result=[[@{perception}d10]]}}'></button><span class='dee'></span>
         	<br />
-		      <label>Knowledge </label><input type="text" name='attr_knowledge' class='sheet-short' value='25'>
+		      <label>Knowledge </label><input type="number" name='attr_knowledge' class='sheet-short' >
         	<button type='roll' name='roll_knowledge' value='&{template:default} {{name=@{character_name}}} {{result=[[@{knowledge}d10]]}}'></button><span class='dee'></span>
         	<br />
-        	<label>Subconcious </label><input type="text" name='attr_subconcious' class='sheet-short' value='25'>
+        	<label>Subconcious </label><input type="number" name='attr_subconcious' class='sheet-short' >
         	<button type='roll' name='roll_subconcious' value='&{template:default} {{name=@{character_name}}} {{result=[[@{subconcious}d10]]}}'></button><span class='dee'></span>
         	<br />
-        	<label>Stealth </label><input type="text" name='attr_stealth' class='sheet-short' value='25'>
+        	<label>Stealth </label><input type="number" name='attr_stealth' class='sheet-short' >
         	<button type='roll' name='roll_stealth' value='&{template:default} {{name=@{character_name}}} {{result=[[@{stealth}d10]]}}'></button><span class='dee'></span>
         	<br />
-        	<label>Charisma </label><input type="text" name='attr_charisma' class='sheet-short' value='25'>
+        	<label>Charisma </label><input type="number" name='attr_charisma' class='sheet-short' >
         	<button type='roll' name='roll_charisma' value='&{template:default} {{name=@{character_name}}} {{result=[[@{charisma}d10]]}}'></button><span class='dee'></span>
         	<br />
-        	<label>Wealth </label><input type="text" name='attr_wealth' class='sheet-short' value='25'>
+        	<label>Wealth </label><input type="number" name='attr_wealth' class='sheet-short' >
         	<button type='roll' name='roll_wealth' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wealth}d10]]}}'></button><span class='dee'></span>
         	<br />
-        	<label>Nobility </label><input type="text" name='attr_nobility' class='sheet-short' value='25'>
+        	<label>Nobility </label><input type="number" name='attr_nobility' class='sheet-short' >
         	<button type='roll' name='roll_nobility' value='&{template:default} {{name=@{character_name}}} {{result=[[@{nobility}d10]]}}'></button><span class='dee'></span>
         	<br />
-    		  <label>Contacts </label><input type="text" name='attr_contacts' class='sheet-short' value='25'>
+    		  <label>Contacts </label><input type="number" name='attr_contacts' class='sheet-short' >
         	<button type='roll' name='roll_contacts' value='&{template:default} {{name=@{character_name}}} {{result=[[@{contacts}d10]]}}'></button><span class='dee'></span>
         	<br />
 	</div>    
-	
+	<hr/>
 	<div class= "col">
 		<h2>Weapons</h2>
+		<div class="7colrow">
+			<div class="col">
+				<label>Weapon</label>
+				<input type="text" name="weaponname" />
+				<br/>
+				<input type="text" name="weaponname" />
+				<br/>
+				<input type="text" name="weaponname" />
+				<br/>
+				<input type="text" name="weaponname" />
+				<br/>
+				<input type="text" name="weaponname" />
+				<br/>
+				<input type="text" name="weaponname" />
+				<br/>
+			</div>
+			<div class="col">
+				<label>To-Hit</label>
+					<input type="number" name="attr_weapon1" />
+					<br/>
+					<input type="number" name="attr_weapon2" />
+					<br/>
+					<input type="number" name="attr_weapon3" />
+					<br/>
+					<input type="number" name="attr_weapon4" />
+					<br/>
+					<input type="number" name="attr_weapon5" />
+					<br/>
+					<input type="number" name="attr_weapon6" />
+					<br/>
+				</div>	
+				
+			<div class="col">
+				<label>RTH</label>
+				<button type='roll' name='roll_ToHit1' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon1}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<br/>
+				<button type='roll' name='roll_ToHit2' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon2}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<br/>
+				<button type='roll' name='roll_ToHit3' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon3}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<br/>
+				<button type='roll' name='roll_ToHit4' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon4}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<br/>
+				<button type='roll' name='roll_ToHit5' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon5}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<br/>
+				<button type='roll' name='roll_ToHit6' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon6}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<br/>
+			</div>
+			
+			<div class="col">
+				<label>Skill</label>
+				<input type="number" name="attr_wskill1" />
+				<br/>
+				<input type="number" name="attr_wskill2" />
+				<br/>
+				<input type="number" name="attr_wskill3" />
+				<br/>
+				<input type="number" name="attr_wskill4" />
+				<br/>
+				<input type="number" name="attr_wskill5" />
+				<br/>
+				<input type="number" name="attr_wskill6" />
+				<br/>
+			</div>
+			
+			<div class="col">
+				<label>DamageDice</label>
+				<input type="number" name="attr_wdamage1" />
+				<br/>
+				<input type="number" name="attr_wdamage2" />
+				<br/>
+				<input type="number" name="attr_wdamage3" />
+				<br/>
+				<input type="number" name="attr_wdamage4" />
+				<br/>
+				<input type="number" name="attr_wdamage5" />
+				<br/>
+				<input type="number" name="attr_wdamage6" />
+				<br/>
+			</div>
+
+			
+			<div class"col">
+				<Label>RDam</Label>
+				<button type='roll' name='roll_Damage1' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage1}d10]]}}'></button><span class='dee'></span>
+				<br/>
+			</div>
+			
+			<div class="col">
+				<label>Speed</label>
+				<input type="text" name="weaponspeed" />
+				<br/>
+				<input type="text" name="weaponspeed" />
+				<br/>
+				<input type="text" name="weaponspeed" />
+				<br/>
+				<input type="text" name="weaponspeed" />
+				<br/>
+				<input type="text" name="weaponspeed" />
+				<br/>
+				<input type="text" name="weaponspeed" />
+				<br/>
+			</div>
+			
+		</div>	
+		
+		<Label>Untrained</label><input type="number" name='attr_untrained'/>
+		<br/>
 	</div>
-</div>
+
 <hr/>	
 	<h2">Experience</h2>
 		
