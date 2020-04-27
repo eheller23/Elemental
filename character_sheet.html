@@ -92,17 +92,17 @@
 				
 			<div class="col">
 				<label>RTH</label>
-				<button type='roll' name='roll_ToHit1' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon1}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_ToHit1' value="/roll @{weapon1}d10 + @{untrained}d10"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_ToHit2' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon2}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_ToHit2' value="/roll @{weapon2}d10 + @{untrained}d10"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_ToHit3' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon3}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_ToHit3' value="/roll @{weapon3}d10 + @{untrained}d10"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_ToHit4' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon4}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_ToHit4' value="/roll @{weapon4}d10 + @{untrained}d10"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_ToHit5' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon5}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_ToHit5' value="/roll @{weapon5}d10 + @{untrained}d10"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_ToHit6' value='&{template:default} {{name=@{character_name}}} {{result=[[@{weapon6}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_ToHit6' value="/roll @{weapon6}d10 + @{untrained}d10"></button><span class='dee'></span>
 				<br/>
 			</div>
 			
@@ -124,34 +124,34 @@
 			
 			<div class="col">
 				<label>DamageDice</label>
-				<input type="number" name="attr_wdamage1" />
+				<input type="text" name="attr_wdamage1" />
 				<br/>
-				<input type="number" name="attr_wdamage2" />
+				<input type="text" name="attr_wdamage2" />
 				<br/>
-				<input type="number" name="attr_wdamage3" />
+				<input type="text" name="attr_wdamage3" />
 				<br/>
-				<input type="number" name="attr_wdamage4" />
+				<input type="text" name="attr_wdamage4" />
 				<br/>
-				<input type="number" name="attr_wdamage5" />
+				<input type="text" name="attr_wdamage5" />
 				<br/>
-				<input type="number" name="attr_wdamage6" />
+				<input type="text" name="attr_wdamage6" />
 				<br/>
 			</div>
 
 			
 			<div class="col">
 				<label>RollDam</label>
-				<button type='roll' name='roll_Damage1' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage1}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_Damage1' value="/roll @{wdamage1}"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_Damage2' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage2}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_Damage2' value="/roll @{wdamage2}"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_Damage3' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage3}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_Damage3' value="/roll @{wdamage3}"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_Damage4' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage4}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_Damage4' value="/roll @{wdamage4}"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_Damage5' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage5}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_Damage5' value="/roll @{wdamage5}"></button><span class='dee'></span>
 				<br/>
-				<button type='roll' name='roll_Damage6' value='&{template:default} {{name=@{character_name}}} {{result=[[@{wdamage6}d10 + @{untrained}d10]]}}'></button><span class='dee'></span>
+				<button type='roll' name='roll_Damage6' value="/roll @{wdamage6}"></button><span class='dee'></span>
 				<br/>
 			</div>
 			
