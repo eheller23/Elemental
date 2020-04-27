@@ -1,7 +1,26 @@
+<div>
+	<!-- Set up the Tabs -->
+	<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basic Info" checked="checked"/> 
+	<span class="sheet-tab sheet-tab1" style='line-height: 40px;'>BASIC INFO</span>
+	<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Weapons & Magic" /> 
+	<span class="sheet-tab sheet-tab2" style='line-height: 20px;'>WEAPONS & MAGIC</span>
+	<input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Skills" /> 
+	<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>SKILLS</span>
+	<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Equipment" /> 
+	<span class="sheet-tab sheet-tab4" style='line-height: 40px;'>EQUIPMENT</span>
+	
+	<input type="checkbox" class="sheet-hideArcanum" name="attr_ArcanumTab" style="width: 15px; display: none;">
+	<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Health" /> 
+	<span class="sheet-tab sheet-tab5" style='line-height: 40px;'>HEALTH</span>
+		<input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" />
+	<span class="sheet-tab sheet-tab99" style='line-height: 40px;'>ALL</span>
+	<!-- End Tab setup -->
+
 <div class="col">
 	<img src="https://github.com/eheller23/Elemental/blob/master/Elemental%20Logo.jpg?raw=true" />
 </div>	
-          
+
+<div class="sheet-section-core"><!-- Core Tab -->          
 <div class="2colrow">
     <div class="col">
     	<label>Name:</label><input type="text" name="attr_character_name" />
@@ -50,8 +69,39 @@
         	<br />
     		  <label>Contacts </label><input type="number" name='attr_contacts' class='sheet-short' >
         	<br />
-	</div>    
+	</div>
+	<h2>Experience</h2>
+		
+	<div class="3colrow">
+		<div class="col">
+			<label>Ingenio Level:</label><input type="number" name="ingenio_level" />
+			<label>Ingenio XP:</label><input type="number" name="ingenio_xp" />
+		</div>	
+
+		<div class="col">
+			<label>Viator Level:</label><input type="number" name="viator_level" />
+			<label>Viator XP:</label><input type="number" name="viator_xp" />
+		</div>
+
+		<div class="col">
+			<label>Forti Level:</label><input type="number" name="forti_level" />
+			<label>Forti XP:</label><input type="number" name="forti_xp" />
+		</div>
+	</div>
+	<div class="2colrow">
+		<div class="col">
+			<label>Money</label><input type="number" name="money" />
+		</div>
+										     
+		<div class="col">								
+			<label>Vitality</label><input type="number" name="vitality" />
+		</div>
+										   
+	</div>		    
+        <hr/>
+</div>
 	<hr/>
+<div class="sheet-section-edges"><!-- Edges Tab -->
 	<div class= "col">
 		<h2>Weapons</h2>
 		<div class="7colrow">
@@ -123,18 +173,18 @@
 			</div>
 			
 			<div class="col">
-				<label>DamageDice</label>
-				<input type="text" name="attr_wdamage1" />
+				<label>DmgDice</label>
+				<input type="text" name="attr_wdamage1" style="width: 65px;" />
 				<br/>
-				<input type="text" name="attr_wdamage2" />
+				<input type="text" name="attr_wdamage2" style="width: 65px;" />
 				<br/>
-				<input type="text" name="attr_wdamage3" />
+				<input type="text" name="attr_wdamage3" style="width: 65px;" />
 				<br/>
-				<input type="text" name="attr_wdamage4" />
+				<input type="text" name="attr_wdamage4" style="width: 65px;" />
 				<br/>
-				<input type="text" name="attr_wdamage5" />
+				<input type="text" name="attr_wdamage5" style="width: 65px;" />
 				<br/>
-				<input type="text" name="attr_wdamage6" />
+				<input type="text" name="attr_wdamage6" style="width: 65px;" />
 				<br/>
 			</div>
 
@@ -173,94 +223,9 @@
 			
 		</div>	
 	</div>
-
+</div>
 <hr/>	
-	<h2">Experience</h2>
-		
-	<div class="3colrow">
-		<div class="col">
-			<label>Ingenio Level:</label><input type="number" name="ingenio_level" />
-			<label>Ingenio XP:</label><input type="number" name="ingenio_xp" />
-		</div>	
-
-		<div class="col">
-			<label>Viator Level:</label><input type="number" name="viator_level" />
-			<label>Viator XP:</label><input type="number" name="viator_xp" />
-		</div>
-
-		<div class="col">
-			<label>Forti Level:</label><input type="number" name="forti_level" />
-			<label>Forti XP:</label><input type="number" name="forti_xp" />
-		</div>
-									    
-	</div>
-	<hr />
-	<div class="2colrow">
-		<div class="col">
-			<label>Money</label><input type="number" name="money" />
-		</div>
-										     
-		<div class="col">								
-			<label>Vitality</label><input type="number" name="vitality" />
-		</div>
-										   
-	</div>		    
-        <hr/>
-	
-	<div class="5colrow">
-	<h2>Magics</h2>
-		<div class="col">
-				<br/><br/>
-				<button type='roll' name='roll_Folk' value="/roll @{folklevel}d10"></button><span class='dee'></span><br/>
-				<button type='roll' name='roll_Black' value="/roll @{blacklevel}d10"></button><span class='dee'></span>	<br/>
-				<button type='roll' name='roll_Illusion' value="/roll @{illusionlevel}d10"></button><span class='dee'></span><br/>
-				<button type='roll' name='roll_Earth' value="/roll @{earthlevel}d10"></button><span class='dee'></span><br/>
-				<button type='roll' name='roll_Air' value="/roll @{airlevel}d10"></button><span class='dee'></span><br/>
-				<button type='roll' name='roll_Fire' value="/roll @{firelevel}d10"></button><span class='dee'></span><br/>
-				<button type='roll' name='roll_Water' value="/roll @{waterlevel}d10"></button><span class='dee'></span><br/>								  
-		</div>
-		<div class="col">
-				<h3><u>Type</u></h3>
-				<label>Folk</label>
-				<label>Black</label>
-				<label>Illusion</label>
-				<label>Earth</label>
-				<label>Air</label>
-				<label>Fire</label>
-				<label>Water</label>
-		</div>
-		<div class="col">
-				<h3><u>Level</u></h3>
-				<input type="number" name="attr_folklevel" /><br/>
-				<input type="number" name="attr_blacklevel" /><br/>
-				<input type="number" name="attr_illusionlevel" /><br/>
-				<input type="number" name="attr_earthlevel" /><br/>
-				<input type="number" name="attr_airlevel" /><br/>
-				<input type="number" name="attr_firelevel" /><br/>
-				<input type="number" name="attr_waterlevel" /><br/>
-		</div>
-		<div class="col">
-				<h3><u>Sp/8</u></h3>
-				<input type="number" name="attr_folksp8" /><br/>
-				<input type="number" name="attr_blacksp8" /><br/>
-				<input type="number" name="attr_illusionsp8" /><br/>
-				<input type="number" name="attr_earthsp8" /><br/>
-				<input type="number" name="attr_airsp8" /><br/>
-				<input type="number" name="attr_firesp8" /><br/>
-				<input type="number" name="attr_watersp8" /><br/>
-		</div>
-		<div class="col">
-				<h3><u>Potential</u></h3>
-				<input type="number" name="attr_folkpotential" /><br/>
-				<input type="number" name="attr_blackpotential" /><br/>
-				<input type="number" name="attr_illusionpotential" /><br/>
-				<input type="number" name="attr_earthpotential" /><br/>
-				<input type="number" name="attr_airpotential" /><br/>
-				<input type="number" name="attr_firepotential" /><br/>
-				<input type="number" name="attr_waterpotential" /><br/>
-		</div>
-									   
-	</div>
+	<div class="sheet-section-skills">
     <div class="col">
         <h2">Skills</h2>
         	<fieldset class="skills">
@@ -288,7 +253,9 @@
             	   </div>          	   
 		</fieldset>
 	</div>
+	</div>
 <hr/>
+<div class="sheet-section-gear">
 <h2">Equipment & Inventory</h2>
 <div class="3colrow">
     <div class="col">
@@ -313,7 +280,9 @@
         <input type="text" name="attr_item" />
     </div>
 </div>
+</div>
 <hr/>
+	<div class="sheet-section-arcanum">
 <div class="3colrow">
     <div class="col">
         <label></label><input type="hidden" name="head_hidden" />
@@ -323,7 +292,7 @@
     </div>
     <div class="col">
         <label>System Shock:</label><input type="hidden" name="system_shock" />
-        <button type='roll' name='roll_system_shock' value='&{template:default} {{name=@{character_name}}} {{result=[[@{constitution}d10]]}}'></button><span class='dee'></span>
+        <button type='roll' name='roll_system_shock' value='/roll @{constitution}d10'></button><span class='dee'></span>
     </div>
 </div>
 <div class="3colrow">
@@ -358,4 +327,6 @@
     <div class="col">
         <label>Right Leg:</label><input type="number" name="right_leg_health" />
     </div>
+</div>
+</div>
 </div>
