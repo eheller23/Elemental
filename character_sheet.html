@@ -1,7 +1,29 @@
+<div>
+	<!-- Set up the Tabs -->
+	<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basic Info" checked="checked"/> 
+	<span class="sheet-tab sheet-tab1" style='line-height: 40px;'>BASIC INFO</span>
+	<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Edges & Hindrances" /> 
+	<span class="sheet-tab sheet-tab2" style='line-height: 20px;'>EDGES & HINDRANCES</span>
+	<input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Skills" /> 
+	<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>SKILLS</span>
+	<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Equipment" /> 
+	<span class="sheet-tab sheet-tab4" style='line-height: 40px;'>EQUIPMENT</span>
+	
+	<input type="checkbox" class="sheet-hideArcanum" name="attr_ArcanumTab" style="width: 15px; display: none;">
+	<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Arcanum" /> 
+	<span class="sheet-tab sheet-tab5" style='line-height: 40px;'>ARCANUM</span>
+	
+	<input type="radio" class="sheet-tab sheet-tab6" name="attr_core-tab" value="6" title="Journal" /> 
+	<span class="sheet-tab sheet-tab6" style='line-height: 40px;'>JOURNAL</span>
+	<input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" />
+	<span class="sheet-tab sheet-tab99" style='line-height: 40px;'>ALL</span>
+	<!-- End Tab setup -->
+
 <div class="col">
 	<img src="https://github.com/eheller23/Elemental/blob/master/Elemental%20Logo.jpg?raw=true" />
 </div>	
-          
+
+<div class="sheet-section-core"><!-- Core Tab -->          
 <div class="2colrow">
     <div class="col">
     	<label>Name:</label><input type="text" name="attr_character_name" />
@@ -50,8 +72,39 @@
         	<br />
     		  <label>Contacts </label><input type="number" name='attr_contacts' class='sheet-short' >
         	<br />
-	</div>    
+	</div>
+	<h2>Experience</h2>
+		
+	<div class="3colrow">
+		<div class="col">
+			<label>Ingenio Level:</label><input type="number" name="ingenio_level" />
+			<label>Ingenio XP:</label><input type="number" name="ingenio_xp" />
+		</div>	
+
+		<div class="col">
+			<label>Viator Level:</label><input type="number" name="viator_level" />
+			<label>Viator XP:</label><input type="number" name="viator_xp" />
+		</div>
+
+		<div class="col">
+			<label>Forti Level:</label><input type="number" name="forti_level" />
+			<label>Forti XP:</label><input type="number" name="forti_xp" />
+		</div>
+	</div>
+	<div class="2colrow">
+		<div class="col">
+			<label>Money</label><input type="number" name="money" />
+		</div>
+										     
+		<div class="col">								
+			<label>Vitality</label><input type="number" name="vitality" />
+		</div>
+										   
+	</div>		    
+        <hr/>
+</div>
 	<hr/>
+<div class="sheet-section-edges"><!-- Edges Tab -->
 	<div class= "col">
 		<h2>Weapons</h2>
 		<div class="7colrow">
@@ -123,7 +176,7 @@
 			</div>
 			
 			<div class="col">
-				<label>DamageDice</label>
+				<label>DmgDice</label>
 				<input type="text" name="attr_wdamage1" style="width: 65px;" />
 				<br/>
 				<input type="text" name="attr_wdamage2" style="width: 65px;" />
@@ -173,39 +226,9 @@
 			
 		</div>	
 	</div>
-
+</div>
 <hr/>	
-	<h2">Experience</h2>
-		
-	<div class="3colrow">
-		<div class="col">
-			<label>Ingenio Level:</label><input type="number" name="ingenio_level" />
-			<label>Ingenio XP:</label><input type="number" name="ingenio_xp" />
-		</div>	
-
-		<div class="col">
-			<label>Viator Level:</label><input type="number" name="viator_level" />
-			<label>Viator XP:</label><input type="number" name="viator_xp" />
-		</div>
-
-		<div class="col">
-			<label>Forti Level:</label><input type="number" name="forti_level" />
-			<label>Forti XP:</label><input type="number" name="forti_xp" />
-		</div>
-									    
-	</div>
-	<hr />
-	<div class="2colrow">
-		<div class="col">
-			<label>Money</label><input type="number" name="money" />
-		</div>
-										     
-		<div class="col">								
-			<label>Vitality</label><input type="number" name="vitality" />
-		</div>
-										   
-	</div>		    
-        <hr/>
+	<div class="sheet-section-skills">
     <div class="col">
         <h2">Skills</h2>
         	<fieldset class="skills">
@@ -233,7 +256,9 @@
             	   </div>          	   
 		</fieldset>
 	</div>
+	</div>
 <hr/>
+<div class="sheet-section-gear">
 <h2">Equipment & Inventory</h2>
 <div class="3colrow">
     <div class="col">
@@ -258,7 +283,9 @@
         <input type="text" name="attr_item" />
     </div>
 </div>
+</div>
 <hr/>
+	<div class="sheet-section-arcanum">
 <div class="3colrow">
     <div class="col">
         <label></label><input type="hidden" name="head_hidden" />
@@ -303,4 +330,6 @@
     <div class="col">
         <label>Right Leg:</label><input type="number" name="right_leg_health" />
     </div>
+</div>
+</div>
 </div>
