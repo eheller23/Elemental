@@ -224,7 +224,7 @@
 		</div>	
 	</div>
 	<div class="5colrow">
-	<h2>Magics</h2>
+	<h2>Lower Magics</h2>
 		<div class="col">
 				<br/><br/>
 				<button type='roll' name='roll_Folk' value="/roll @{folklevel}d10"></button><span class='dee'></span><br/>
@@ -274,6 +274,43 @@
 				<input type="number" name="attr_airpotential" /><br/>
 				<input type="number" name="attr_firepotential" /><br/>
 				<input type="number" name="attr_waterpotential" /><br/>
+		</div>
+
+	</div>
+	<div class="5colrow">
+	<h2>Higher Magics</h2>
+		<div class="col">
+				<br/><br/>
+				<button type='roll' name='roll_HigherMagic1' value="/roll @{highermagic1level+2}d10"></button><span class='dee'></span><br/>
+				<button type='roll' name='roll_HigherMagic2' value="/roll @{highermagic2level+2}d10"></button><span class='dee'></span>	<br/>
+				<button type='roll' name='roll_HigherMagic3' value="/roll @{highermagic3level+2}d10"></button><span class='dee'></span><br/>
+											  
+		</div>
+		<div class="col">
+				<h3><u>Type</u></h3>
+				<input type="text" name="HigherMagic1" /><br/>
+				<input type="text" name="HigherMagic2" /><br/>
+				<input type="text" name="HigherMagic3" /><br/>
+		</div>
+		<div class="col">
+				<h3><u>Level</u></h3>
+				<input type="number" name="attr_highermagic1level" /><br/>
+				<input type="number" name="attr_highermagic2level" /><br/>
+				<input type="number" name="attr_highermagic3level" /><br/>
+		</div>
+		
+		<div class="col">
+				<h3><u>Sp/8</u></h3>
+				<input type="number" name="attr_highermagic1sp8" /><br/>
+				<input type="number" name="attr_highermagic2sp8" /><br/>
+				<input type="number" name="attr_highermagic3sp8" /><br/>
+		</div>
+		
+		<div class="col">
+				<h3><u>Potential</u></h3>
+				<input type="number" name="attr_highermagic1potential" /><br/>
+				<input type="number" name="attr_highermagic2potential" /><br/>
+				<input type="number" name="attr_highermagic3potential" /><br/>
 		</div>
 
 	</div>
@@ -354,7 +391,7 @@
         <label></label><input type="hidden" name="neck_hidden" />
     </div>
     <div class="col">
-        <label>Neck:</label><input type="number" name="neck_health" />
+	    <label>Neck:</label><input type="number" name="neck_health" />
     </div>
     <div class="col">
         <label></label><input type="hidden" name="neck_hidden" />
@@ -366,7 +403,7 @@
     </div>
     <div class="col">
         <label>Chest:</label><input type="number" name="chest_health" />
-    </div>
+    </divå
     <div class="col">
         <label>Right Arm:</label><input type="number" name="right_arm_health" />
     </div>
