@@ -29,7 +29,11 @@
 
 	<div class="col">
 		<label>Race:</label><input type="text" name="attr_race" />
-		<label>Following:</label><input type="text" name="attr_following" />
+		<label>Following:</label><select name="attr_Following">
+  			<option value="0" selected="selected">Select</option>
+  			<option value="1">Ingenio</option>
+  			<option value="1">Viator</option>
+ 			 <option value="2">Forti</option>
 	</div>
 
 	
@@ -39,10 +43,10 @@
 
 	<div class="col">
 		<h2>Attributes</h2>
-	 	     <label>Strength </label><input type="number" name='attr_strength' class='sheet-short'>
+	 	 <label>"Strength </label><input type="number" name='attr_strength' class='sheet-short'>
         	 <button type='roll' name='roll_strength' value="/roll @{strength}d10"></button><span class='dee'></span>
         	 <br />
-		     <label>Dexterity </label><input type="number" name='attr_dexterity' class='sheet-short'>
+		 <label>Dexterity </label><input type="number" name='attr_dexterity' class='sheet-short'>
         	<button type='roll' name='roll_dexterity' value="/roll @{dexterity}d10"></button><span class='dee'></span>
        	 	<br />
 		      <label>Constitution </label><input type="number" name='attr_constitution' class='sheet-short'>
@@ -74,27 +78,27 @@
 		
 	<div class="3colrow">
 		<div class="col">
-			<label>Ingenio Level:</label><input type="number" name="ingenio_level" />
-			<label>Ingenio XP:</label><input type="number" name="ingenio_xp" />
+			<label>Ingenio Level:</label><input type="number" name="attr_ingenio_level" />
+			<label>Ingenio XP:</label><input type="number" name="attr_ingenio_xp" />
 		</div>	
 
 		<div class="col">
-			<label>Viator Level:</label><input type="number" name="viator_level" />
-			<label>Viator XP:</label><input type="number" name="viator_xp" />
+			<label>Viator Level:</label><input type="number" name="attr_viator_level" />
+			<label>Viator XP:</label><input type="number" name="attr_viator_xp" />
 		</div>
 
 		<div class="col">
-			<label>Forti Level:</label><input type="number" name="forti_level" />
-			<label>Forti XP:</label><input type="number" name="forti_xp" />
+			<label>Forti Level:</label><input type="number" name="attr_forti_level" />
+			<label>Forti XP:</label><input type="number" name="attr_forti_xp" />
 		</div>
 	</div>
 	<div class="2colrow">
 		<div class="col">
-			<label>Money</label><input type="number" name="money" />
+			<label>Money</label><input type="number" name="attr_money" />
 		</div>
 										     
 		<div class="col">								
-			<label>Vitality</label><input type="number" name="vitality" />
+			<label>Vitality</label><input type="number" name="attr_vitality" value="25" class='sheet-short'/>
 		</div>
 										   
 	</div>		    
@@ -136,7 +140,7 @@
 					<br/>
 					<input type="number" name="attr_weapon6" />
 					<br/>
-					<input type="number" name="attr_untrained" />
+					<input type="number" name="attr_untrained" value="round((@{dexterity}+@{perception})/2)-1" disabled />
 					<br/>
 				</div>	
 				
@@ -207,17 +211,17 @@
 			
 			<div class="col">
 				<label>Speed</label>
-				<input type="number" name="weaponspeed" />
+				<input type="number" name="attr_weaponspeed1" />
 				<br/>
-				<input type="number" name="weaponspeed" />
+				<input type="number" name="attr_weaponspeed2" />
 				<br/>
-				<input type="number" name="weaponspeed" />
+				<input type="number" name="attr_weaponspeed3" />
 				<br/>
-				<input type="number" name="weaponspeed" />
+				<input type="number" name="attr_weaponspeed4" />
 				<br/>
-				<input type="number" name="weaponspeed" />
+				<input type="number" name="attr_weaponspeed5" />
 				<br/>
-				<input type="number" name="weaponspeed" />
+				<input type="number" name="attr_weaponspeed6" />
 				<br/>
 			</div>
 			
@@ -288,9 +292,9 @@
 		</div>
 		<div class="col">
 				<h3><u>Type</u></h3>
-				<input type="text" name="HigherMagic1" /><br/>
-				<input type="text" name="HigherMagic2" /><br/>
-				<input type="text" name="HigherMagic3" /><br/>
+				<input type="text" name="attr_HigherMagic1" /><br/>
+				<input type="text" name="attr_HigherMagic2" /><br/>
+				<input type="text" name="attr_HigherMagic3" /><br/>
 		</div>
 		<div class="col">
 				<h3><u>Level</u></h3>
@@ -379,7 +383,8 @@
         <label></label><input type="hidden" name="head_hidden" />
     </div>
     <div class="col">
-        <label>Head:</label><input type="number" name="head_health" />
+        <label>Head:</label><input type="number" name="head_health" /> / <input type="number" name="attr_total_head" value="round(@{vitality}*.2)" disabled /> 
+    </div>
     </div>
     <div class="col">
         <label>System Shock:</label><input type="hidden" name="system_shock" />
@@ -391,7 +396,7 @@
         <label></label><input type="hidden" name="neck_hidden" />
     </div>
     <div class="col">
-	    <label>Neck:</label><input type="number" name="neck_health" />
+	    <label>Neck:</label><input type="number" name="attr_neck_health" /> / <input type="number" name="attr_total_neck" value="round(@{vitality}*.1)" disabled="true" /> 
     </div>
     <div class="col">
         <label></label><input type="hidden" name="neck_hidden" />
@@ -399,24 +404,29 @@
 </div>
 <div class="3colrow">
     <div class="col">
-        <label>Left Arm:</label><input type="number" name="left_arm_health" />
+        <label>Left Arm:</label><input type="number" name="left_arm_health" /> / <input type="number" name="attr_total_left_arm" value="round(@{vitality}*.4)" disabled="true" /> 
+    </div>
     </div>
     <div class="col">
-        <label>Chest:</label><input type="number" name="chest_health" />
+        <label>Chest:</label><input type="number" name="chest_health" /> / <input type="number" name="attr_total_chest" value="round(@{vitality}*.67)" disabled /> 
+    </div>
     </divå
     <div class="col">
-        <label>Right Arm:</label><input type="number" name="right_arm_health" />
+        <label>Right Arm:</label><input type="number" name="right_arm_health" />/ <input type="number" name="attr_total_right_arm" value="round(@{vitality}*.4)" disabled /> 
+    </div>
     </div>
 </div>
 <div class="3colrow">
     <div class="col">
-        <label>Left Leg:</label><input type="number" name="left_leg_health" />
+        <label>Left Leg:</label><input type="number" name="left_leg_health" /> / <input type="number" name="attr_total_left_leg" value="round(@{vitality}*.5)" disabled /> 
+    </div>
     </div>
     <div class="col">
         <label></label><input type="hidden" name="legs_hidden" />
     </div>
     <div class="col">
-        <label>Right Leg:</label><input type="number" name="right_leg_health" />
+        <label>Right Leg:</label><input type="number" name="right_leg_health" /> / <input type="number" name="attr_total_right_leg" value="round(@{vitality}*.5)" disabled /> 
+    </div>
     </div>
 </div>
 </div>
