@@ -1,5 +1,7 @@
 <div>
 	<!-- Set up the Tabs -->
+	<input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" checked="checked"/>
+	<span class="sheet-tab sheet-tab99" style='line-height: 40px;'>ALL</span>
 	<input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basic Info" /> 
 	<span class="sheet-tab sheet-tab1" style='line-height: 40px;'>BASIC INFO</span>
 	<input type="radio" class="sheet-tab sheet-tab2" name="attr_core-tab" value="2" title="Weapons & Magic" /> 
@@ -8,12 +10,9 @@
 	<span class="sheet-tab sheet-tab3" style='line-height: 40px;'>SKILLS</span>
 	<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Equipment" /> 
 	<span class="sheet-tab sheet-tab4" style='line-height: 40px;'>EQUIPMENT</span>
-	
 	<input type="checkbox" class="sheet-hideArcanum" name="attr_ArcanumTab" style="width: 15px; display: none;">
 	<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Health" /> 
 	<span class="sheet-tab sheet-tab5" style='line-height: 40px;'>HEALTH</span>
-		<input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" checked="checked"/>
-	<span class="sheet-tab sheet-tab99" style='line-height: 40px;'>ALL</span>
 	<!-- End Tab setup -->
 
 <div class="col">
@@ -21,10 +20,10 @@
 </div>	
 
 <div class="sheet-section-core"><!-- Core Tab -->          
-<div class="2colrow" style="background-color: light-gray; padding-left: 10px;">
+<div class="2colrow">
     <div class="col">
-    	<label>Name:</label><input type="text" name="attr_character_name" />
-	<label>Player:</label><input type="text" name="attr_player_name" />	
+        <label>Name:</label><input type="text" name="attr_character_name" />
+	    <label>Player:</label><input type="text" name="attr_player_name" />	
 	</div>
 
 	<div class="col">
@@ -35,14 +34,12 @@
   			<option value="1">Viator</option>
  			 <option value="2">Forti</option>
 	</div>
-
-	
 </div>
 
 <hr/>
 
-	<div class="4colrow">
-		<div class="col">
+	<div class="4colrow" >
+		<div class="col" style="padding-left: 10 px;">
 		    <h2>Attributes</h2>
 	 	    <span><h3><button type='roll' name='roll_strength' value="/roll @{strength}d10"></button> Strength: <input type="number" name='attr_strength' style="float: right;" class='sheet-short'></h3></span>
 	 	    
@@ -71,7 +68,7 @@
     	   <h2> &nbsp; </h2>
     	</div>
     	
-    	<div class="col" style="float: center;">
+    	<div class="col" style="padding-left: 25px; float: center;">
     	    <h2>Experience</h2>
     	    <h3>Ingenio</h3>
     	    <label>Level:</label><input type="number" name="attr_ingenio_level" style="float: center;" />
@@ -96,9 +93,9 @@
 
     
 </div>
-	<hr/>
-<div class="sheet-section-edges"><!-- Edges Tab -->
 
+<div class="sheet-section-edges"><!-- Edges Tab -->
+<hr/>
 <div class="3colrow">
     <span><h2>Initiative</h2></span>
     <div class="col">
@@ -115,7 +112,6 @@
         <h3>Spellcasting</h3>
         <button type='roll' name='roll_spellcasting_init' value="/roll @{subconcious}d10>6 &{tracker}"></button><span class='dee'></span><br/>
     </div>
-    
 </div>
 <hr/>
 	<div class= "col">
@@ -238,12 +234,21 @@
 			</div>
 			
 		</div>	
+		<hr/>
 	</div>
 	
-	<hr/>
+<!-------MAGICS------------------------------------->
+
+	<div class="3colrow">
+	    <div class="col">
+	        <h2>Lower Magics</h2>
+	    </div>
+	    <div class="col">
+	        <h2>Higher Magics</h2>
+	    </div>
+	</div>
+	<div class="10colrow">
 	
-	<div class="5colrow">
-	<h2>Lower Magics</h2>
 		<div class="col">
 				<h3> &nbsp; </h3>
 				<button type='roll' name='roll_Folk' value="/roll @{folklevel}d10"></button><span class='dee'></span><br/>
@@ -294,12 +299,8 @@
 				<input type="number" name="attr_firepotential" /><br/>
 				<input type="number" name="attr_waterpotential" /><br/>
 		</div>
-
-	</div>
-	<div class="5colrow">
-	<h2>Higher Magics</h2>
-		<div class="col">
-				<br/>
+    	<div class="col">
+				<h3> &nbsp; </h3>
 				<button type='roll' name='roll_HigherMagic1' value="/roll (@{highermagic1level}+2)d10"></button><span class='dee'></span><br/>
 				<button type='roll' name='roll_HigherMagic2' value="/roll (@{highermagic2level}+2)d10"></button><span class='dee'></span><br/>
 				<button type='roll' name='roll_HigherMagic3' value="/roll (@{highermagic3level}+2)d10"></button><span class='dee'></span><br/>
@@ -331,12 +332,12 @@
 				<input type="number" name="attr_highermagic2potential" /><br/>
 				<input type="number" name="attr_highermagic3potential" /><br/>
 		</div>
-
 	</div>
-
+	
+<hr/>
 </div>
 
-<hr/>	
+	
 	<div class="sheet-section-skills">
     <div class="col">
         <h2>Skills</h2>
@@ -400,8 +401,9 @@
 		    <label>Silver: <input type="number" name="attr_money_silver" style="float: right;"/></label>
 		</div>
 	</div>
-</div>
 <hr/>
+</div>
+
 	<div class="sheet-section-arcanum">
 <div class="3colrow">
     <div class="col">
