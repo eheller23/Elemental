@@ -16,7 +16,7 @@
 	<span class="sheet-tab sheet-tab99" style='line-height: 40px;'>ALL</span>
 	<!-- End Tab setup -->
 
-<div class="col">
+<div>
 	<img src="https://github.com/eheller23/Elemental/blob/master/Elemental%20Logo.jpg?raw=true" />
 </div>	
 
@@ -41,61 +41,56 @@
 
 <hr/>
 
-<body>
-	<div class="col">
-		<h2>Attributes</h2>
-	 	    <span><p><button type='roll' name='roll_strength' value="/roll @{strength}d10"></button>
-	 	    Strength: <input type="number" name='attr_strength' class='sheet-short'></p></span>
+	<div class="4colrow">
+		<div class="col">
+		    <h2>Attributes</h2>
+	 	    <span><h3><button type='roll' name='roll_strength' value="/roll @{strength}d10"></button> Strength: <input type="number" name='attr_strength' style="float: right;" class='sheet-short'></h3></span>
 	 	    
-		    <span><p><button type='roll' name='roll_dexterity' value="/roll @{dexterity}d10"></button>
-		    Dexterity: <input type="number" name='attr_dexterity' class='sheet-short'></p></span>
+		    <span><h3><button type='roll' name='roll_dexterity' value="/roll @{dexterity}d10"></button> Dexterity: <input type="number" name='attr_dexterity' style="float: right;" class='sheet-short'></h3></span>
     
-		    <span><p><button type='roll' name='roll_constitution' value="/roll @{constitution}d10"></button>
-		    Constitution: <input type="number" name='attr_constitution' class='sheet-short'></p></span>
+		    <span><h3><button type='roll' name='roll_constitution' value="/roll @{constitution}d10"></button> Constitution: <input type="number" name='attr_constitution' style="float: right;" class='sheet-short'></h3></span>
         
-            <span><p><button type='roll' name='roll_perception' value="/roll @{perception}d10"></button>
-		    Perception: <input type="number" name='attr_perception' class='sheet-short'></p></span>
+            <span><h3><button type='roll' name='roll_perception' value="/roll @{perception}d10"></button> Perception: <input type="number" name='attr_perception' style="float: right;" class='sheet-short'></h3></span>
 		    
-		    <span><p><button type='roll' name='roll_knowledge' value="/roll @{knowledge}d10"></button>
-		    Knowledge: <input type="number" name='attr_knowledge' class='sheet-short'></p></span>
+		    <span><h3><button type='roll' name='roll_knowledge' value="/roll @{knowledge}d10"></button> Knowledge: <input type="number" name='attr_knowledge' style="float: right;" class='sheet-short'></h3></span>
 		    
-		    <span><p><button type='roll' name='roll_subconcious' value="/roll @{subconcious}d10"></button>
-		    Subconcious: <input type="number" name='attr_subconcious' class='sheet-short'></p></span>
+		    <span><h3><button type='roll' name='roll_subconcious' value="/roll @{subconcious}d10"></button> Subconcious: <input type="number" name='attr_subconcious' style="float: right;" class='sheet-short'></h3></span>
 		    
-		    <span><p><button type='roll' name='roll_stealth' value="/roll @{stealth}d10"></button>
-		    Stealth: <input type="number" name='attr_stealth' class='sheet-short'></p></span>
+		    <span><h3><button type='roll' name='roll_stealth' value="/roll @{stealth}d10"></button> Stealth: <input type="number" name='attr_stealth' style="float: right;" class='sheet-short'></h3></span>
 		    
-		    <span><p><button type='roll' name='roll_charisma' value="/roll @{charisma}d10"></button>
-		    Charisma: <input type="number" name='attr_charisma' class='sheet-short'></p></span>
+		    <span><h3><button type='roll' name='roll_charisma' value="/roll @{charisma}d10"></button> Charisma: <input type="number" name='attr_charisma' style="float: right;" class='sheet-short'></h3></span>
 		    
-		    
-        	<span><p>Wealth: <input type="number" name='attr_wealth' class='sheet-short' ></p></span>
+            <span><h3><button type='roll' name='roll_wealth' value="/roll @{wealth}d10"></button> Wealth: <input type="number" name='attr_wealth' style="float: right;" class='sheet-short' ></h3></span>
         	
-        	<span><p>Nobility: <input type="number" name='attr_nobility' class='sheet-short' ></p></span>
+        	<span><h3><button type='roll' name='roll_charisma' value="/roll @{status}d10"></button> Status: <input type="number" name='attr_status' style="float: right;" class='sheet-short' ></h3></span>
         	
-    		<span><p>Contacts: <input type="number" name='attr_contacts' class='sheet-short' ></p></span>
+    		<span><h3><button type='roll' name='roll_charisma' value="/roll @{contacts}d10"></button> Contacts: <input type="number" name='attr_contacts' style="float: right;" class='sheet-short' ></h3></span>
+    	</div>
+    	
+    	<div class="col">
+    	   <h2> &nbsp; </h2>
+    	</div>
+    	
+    	<div class="col" style="border-left: 2px solid black;">
+    	    <h2>Experience</h2>
+    	    <label>Ingenio Level:</label><input type="number" name="attr_ingenio_level" style="float: center;" />
+			<label>Experience:</label><input type="number" name="attr_ingenio_xp" style="float: center;" />
+			<label>Next Level:</label><input type="number" name="attr_ingenio_next" style="float: center;" />
+    	</div>
+    	<div class="col">
+    	    <h2> &nbsp; </h2>
+    	    <label>Viator Level:</label><input type="number" name="attr_viator_level" style="float: center;" />
+			<label>Viator XP:</label><input type="number" name="attr_viator_xp" style="float: center;" />
+			<label>Next Level:</label><input type="number" name="attr_viator_next" style="float: center;" />
+    	</div>
+    	<div class="col">
+    	    <h2> &nbsp;</h2>
+    	    <label>Forti Level:</label><input type="number" name="attr_forti_level" style="float: center;" />
+			<label>Forti XP:</label><input type="number" name="attr_forti_xp" style="float: center;" />
+			<label>Next Level:</label><input type="number" name="attr_forti_next" style="float: center;" />
+    	</div>
 	</div>
-	
-	</body>
-	
-	<h2>Experience</h2>
-		
-	<div class="3colrow">
-		<div class="col">
-			<label>Ingenio Level:</label><input type="number" name="attr_ingenio_level" />
-			<label>Ingenio XP:</label><input type="number" name="attr_ingenio_xp" />
-		</div>	
 
-		<div class="col">
-			<label>Viator Level:</label><input type="number" name="attr_viator_level" />
-			<label>Viator XP:</label><input type="number" name="attr_viator_xp" />
-		</div>
-
-		<div class="col">
-			<label>Forti Level:</label><input type="number" name="attr_forti_level" />
-			<label>Forti XP:</label><input type="number" name="attr_forti_xp" />
-		</div>
-	</div>
 	<div class="2colrow">
 		<div class="col">
 			<label>Money</label><input type="number" name="attr_money" />
@@ -433,3 +428,11 @@
 </div>
 </div>
 </div>
+
+<!-- ---------------------------SHEET WORKERS----------------- -->
+
+<script type="text/worker">
+
+
+
+</script>
