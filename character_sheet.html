@@ -41,39 +41,43 @@
 
 <hr/>
 
+<body>
 	<div class="col">
 		<h2>Attributes</h2>
-	 	 <label>"Strength </label><input type="number" name='attr_strength' class='sheet-short'>
-        	 <button type='roll' name='roll_strength' value="/roll @{strength}d10"></button><span class='dee'></span>
-        	 <br />
-		 <label>Dexterity </label><input type="number" name='attr_dexterity' class='sheet-short'>
-        	<button type='roll' name='roll_dexterity' value="/roll @{dexterity}d10"></button><span class='dee'></span>
-       	 	<br />
-		      <label>Constitution </label><input type="number" name='attr_constitution' class='sheet-short'>
-        	<button type='roll' name='roll_constitution' value="/roll @{constitution}d10"></button><span class='dee'></span>
-        	<br />
-		      <label>Perception </label><input type="number" name='attr_perception' class='sheet-short'>
-        	<button type='roll' name='roll_perception' value="/roll @{perception}d10"></button><span class='dee'></span>
-        	<br />
-		      <label>Knowledge </label><input type="number" name='attr_knowledge' class='sheet-short' >
-        	<button type='roll' name='roll_knowledge' value="/roll @{knowledge}d10"></button><span class='dee'></span>
-        	<br />
-        	<label>Subconcious </label><input type="number" name='attr_subconcious' class='sheet-short' >
-        	<button type='roll' name='roll_subconcious' value="/roll @{subconcious}d10"></button><span class='dee'></span>
-        	<br />
-        	<label>Stealth </label><input type="number" name='attr_stealth' class='sheet-short' >
-        	<button type='roll' name='roll_stealth' value="/roll @{stealth}d10"></button><span class='dee'></span>
-        	<br />
-        	<label>Charisma </label><input type="number" name='attr_charisma' class='sheet-short' >
-        	<button type='roll' name='roll_charisma' value="/roll @{charisma}d10"></button><span class='dee'></span>
-        	<br />
-        	<label>Wealth </label><input type="number" name='attr_wealth' class='sheet-short' >
-		<br />
-        	<label>Nobility </label><input type="number" name='attr_nobility' class='sheet-short' >
-        	<br />
-    		  <label>Contacts </label><input type="number" name='attr_contacts' class='sheet-short' >
-        	<br />
+	 	    <span><p><button type='roll' name='roll_strength' value="/roll @{strength}d10"></button>
+	 	    Strength: <input type="number" name='attr_strength' class='sheet-short'></p></span>
+	 	    
+		    <span><p><button type='roll' name='roll_dexterity' value="/roll @{dexterity}d10"></button>
+		    Dexterity: <input type="number" name='attr_dexterity' class='sheet-short'></p></span>
+    
+		    <span><p><button type='roll' name='roll_constitution' value="/roll @{constitution}d10"></button>
+		    Constitution: <input type="number" name='attr_constitution' class='sheet-short'></p></span>
+        
+            <span><p><button type='roll' name='roll_perception' value="/roll @{perception}d10"></button>
+		    Perception: <input type="number" name='attr_perception' class='sheet-short'></p></span>
+		    
+		    <span><p><button type='roll' name='roll_knowledge' value="/roll @{knowledge}d10"></button>
+		    Knowledge: <input type="number" name='attr_knowledge' class='sheet-short'></p></span>
+		    
+		    <span><p><button type='roll' name='roll_subconcious' value="/roll @{subconcious}d10"></button>
+		    Subconcious: <input type="number" name='attr_subconcious' class='sheet-short'></p></span>
+		    
+		    <span><p><button type='roll' name='roll_stealth' value="/roll @{stealth}d10"></button>
+		    Stealth: <input type="number" name='attr_stealth' class='sheet-short'></p></span>
+		    
+		    <span><p><button type='roll' name='roll_charisma' value="/roll @{charisma}d10"></button>
+		    Charisma: <input type="number" name='attr_charisma' class='sheet-short'></p></span>
+		    
+		    
+        	<span><p>Wealth: <input type="number" name='attr_wealth' class='sheet-short' ></p></span>
+        	
+        	<span><p>Nobility: <input type="number" name='attr_nobility' class='sheet-short' ></p></span>
+        	
+    		<span><p>Contacts: <input type="number" name='attr_contacts' class='sheet-short' ></p></span>
 	</div>
+	
+	</body>
+	
 	<h2>Experience</h2>
 		
 	<div class="3colrow">
@@ -385,7 +389,7 @@
     <div class="col">
         <label>Head:</label><input type="number" name="head_health" /> / <input type="number" name="attr_total_head" value="round(@{vitality}*.2)" disabled /> 
     </div>
-    </div>
+ 
     <div class="col">
         <label>System Shock:</label><input type="hidden" name="system_shock" />
         <button type='roll' name='roll_system_shock' value='/roll @{constitution}d10'></button><span class='dee'></span>
@@ -406,28 +410,26 @@
     <div class="col">
         <label>Left Arm:</label><input type="number" name="left_arm_health" /> / <input type="number" name="attr_total_left_arm" value="round(@{vitality}*.4)" disabled="true" /> 
     </div>
-    </div>
+    
     <div class="col">
         <label>Chest:</label><input type="number" name="chest_health" /> / <input type="number" name="attr_total_chest" value="round(@{vitality}*.67)" disabled /> 
     </div>
-    </divå
     <div class="col">
-        <label>Right Arm:</label><input type="number" name="right_arm_health" />/ <input type="number" name="attr_total_right_arm" value="round(@{vitality}*.4)" disabled /> 
-    </div>
+        <label>Right Arm:</label><input type="number" name="right_arm_health" /> / <input type="number" name="attr_total_right_arm" value="round(@{vitality}*.4)" disabled /> 
     </div>
 </div>
 <div class="3colrow">
     <div class="col">
         <label>Left Leg:</label><input type="number" name="left_leg_health" /> / <input type="number" name="attr_total_left_leg" value="round(@{vitality}*.5)" disabled /> 
     </div>
-    </div>
+  
     <div class="col">
         <label></label><input type="hidden" name="legs_hidden" />
     </div>
     <div class="col">
         <label>Right Leg:</label><input type="number" name="right_leg_health" /> / <input type="number" name="attr_total_right_leg" value="round(@{vitality}*.5)" disabled /> 
     </div>
-    </div>
+   
 </div>
 </div>
 </div>
